@@ -20,6 +20,47 @@
     <link rel="stylesheet" href="/static/assets/css/templatemo-space-dynamic.css">
     <link rel="stylesheet" href="/static/assets/css/animated.css">
     <link rel="stylesheet" href="/static/assets/css/owl.css">
+
+    <style>
+    .button {
+      border-radius: 2px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 18px;
+      padding: 5px;
+      width: 150px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    </style>
 <!--
 
 TemplateMo 562 Space Dynamic
@@ -66,7 +107,8 @@ https://templatemo.com/tm-562-space-dynamic
               <li class="scroll-to-section"><a href="#blog">Events</a></li>
               <li class="scroll-to-section"><a href="/gallery">Gallery</a></li>
               <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
-<li class="main-red-button"><a href="/price">Today's Price </a></li>
+        <a href="/price"><button class="button">Today Price </button></a>
+
             </ul>
             <a class='menu-trigger'>
                 <span>Menu</span>
