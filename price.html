@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>TNPFA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <style>
+      .btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+</style>
+<!--
+
+TemplateMo 562 Space Dynamic
+
+https://templatemo.com/tm-562-space-dynamic
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+
+        <img src="assets/images/loading1.gif" alt="team meeting"  >
+
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <h4><span>TNPFA</span></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+
+
+              <li class="scroll-to-section"><div class="main-red-button"><a href="index.html">home </a></div></li>
+            </ul>
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<br>
+
+
+
+<br><br><br><br>
+
+
+
+<br>
+
+
+<center><h4><span>Egg price = 5.50 </span></h4></center>
+
+<br>
+<br>
+<center>
+<form action="/action_page.php">
+  <label for="birthday">Select Dates</label>
+  <input type="date" id="birthday" name="birthday">
+
+</form>
+<br>
+<div class="btn-group">
+
+  <button>Generate PDF</button></div></center>
+
+
+
+<br>
+<br>
+<br>
+
+<br>
+
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
+          <p>© Copyright 2021
+
+          <br>Design: <a rel="nofollow" href=""></a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  var Message;
+  var info = {};
+  var BotMessage="Today, Egg Price is 5 rupees 50 paisaa"
+  talking = true; //when false the speach function doesn't work
+
+  function Speech(say) {
+               if ('speechSynthesis' in window && talking) {
+                    var utterance = new SpeechSynthesisUtterance(say);
+                    //msg.voice = voices[10]; // Note: some voices don't support altering params
+                    //msg.voiceURI = 'native';
+                    //utterance.volume = 1; // 0 to 1
+                    //utterance.rate = 0.1; // 0.1 to 10
+                    //utterance.pitch = 1; //0 to 2
+                    //utterance.text = 'Hello World';
+                    //utterance.lang = 'en-US';
+                    speechSynthesis.speak(utterance);
+               }
+          }
+
+  Message = function (arg) {
+          this.text = arg.text, this.message_side = arg.message_side;
+          this.draw = function (_this) {
+              return function () {
+                  var $message;
+                  $message = $($('.message_template').clone().html());
+                  $message.addClass(_this.message_side).find('.text').html(_this.text);
+                  $('.messages').append($message);
+                  return setTimeout(function () {
+                      return $message.addClass('appeared');
+                  }, 0);
+              };
+          }(this);
+          return this;
+      };
+
+  sendMessage = function (text,how) {
+              var $messages, message;
+              if (text.trim() === '') {
+                  return;
+              }
+              $('.message_input').val('');
+              $messages = $('.messages');
+              if (how == 'bot'){
+                message_side = 'left'
+              }else {
+                message_side = 'right'
+              }
+              // message_side = message_side === 'left' ? 'right' : 'left';
+              message = new Message({
+                  text: text,
+                  message_side: message_side
+              });
+              message.draw();
+              return $messages.animate({ scrollTop: $messages.prop('scrollHeight') }, 300);
+          };
+
+          sendMessage(BotMessage,'bot')
+          Speech(BotMessage)
+          var wage = document.getElementById("msg");
+
+          wage.addEventListener("keydown", function(e){
+
+
+          })
+  </script>
+
+
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/templatemo-custom.js"></script>
+
+</body>
+</html>
