@@ -580,7 +580,7 @@ header
 }
 
 .header-area.header-sticky {
-  min-height: 80px;
+  min-height: 50px;
 }
 
 .header-area .nav {
@@ -622,10 +622,10 @@ header
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
     color: #fe3f40!important;
-    opacity: 1;
+    opacity: 6;
   }
   .header-area.header-sticky .nav li.search-icon a {
-    width: 100%;
+    width: 80%;
   }
   .header-area {
     background-color: #f7f7f7;
@@ -644,7 +644,7 @@ header
     display: block !important;
   }
   .header-area .main-nav {
-    overflow: hidden;
+  
   }
   .header-area .main-nav .nav {
     float: none;
