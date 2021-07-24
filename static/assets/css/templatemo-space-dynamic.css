@@ -580,11 +580,11 @@ header
 }
 
 .header-area.header-sticky {
-  min-height: 50px;
+  min-height: 80px;
 }
 
 .header-area .nav {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .header-area.header-sticky .nav li a.active {
@@ -622,10 +622,10 @@ header
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
     color: #fe3f40!important;
-    opacity: 6;
+    opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
-    width: 80%;
+    width: 100%;
   }
   .header-area {
     background-color: #f7f7f7;
@@ -644,7 +644,7 @@ header
     display: block !important;
   }
   .header-area .main-nav {
-  
+    overflow: hidden;
   }
   .header-area .main-nav .nav {
     float: none;
